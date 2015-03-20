@@ -22,6 +22,9 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 
+" My Bundles
+NeoBundle 'altercation/vim-colors-solarized' 
+
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
@@ -56,3 +59,7 @@ set autoindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
+
+" solarized
+" set background=dark
+" colorscheme solarized
