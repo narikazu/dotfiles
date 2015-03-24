@@ -60,6 +60,10 @@ set autoindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set cursorline
+highlight clear cursorline
+
+hi CursorLineNr cterm=bold
 
 " solarized
 "set background=light
