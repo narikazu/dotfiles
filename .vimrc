@@ -62,5 +62,18 @@ set tabstop=2
 set shiftwidth=2
 
 " solarized
-" set background=dark
-" colorscheme solarized
+"set background=light
+"colorscheme solarized
+"let g:solarized_termcolors=256
+"let g:solarized_termtrans=1
+
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
+vnoremap { "zdi^V{<C-R>z}<ESC>
+vnoremap [ "zdi^V[<C-R>z]<ESC>
+vnoremap ( "zdi^V(<C-R>z)<ESC>
+vnoremap " "zdi^V"<C-R>z^V"<ESC>
+vnoremap ' "zdi'<C-R>z'<ESC>
