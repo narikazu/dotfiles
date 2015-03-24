@@ -21,6 +21,7 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'git://github.com/tpope/vim-rails.git'
 
 " My Bundles
 NeoBundle 'altercation/vim-colors-solarized' 
