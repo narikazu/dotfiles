@@ -60,6 +60,7 @@ set autoindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set noswapfile
 set cursorline
 highlight clear cursorline
 
