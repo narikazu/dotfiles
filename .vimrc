@@ -61,7 +61,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set noswapfile
-set cursorline
+" set cursorline
 highlight clear cursorline
 
 hi CursorLineNr cterm=bold
