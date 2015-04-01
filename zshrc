@@ -61,6 +61,10 @@ plugins=(git rake ruby)
 # User configuration
 
 export PATH="/Users/kokuda1/.rbenv/shims:/Users/kokuda1/.rbenv/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/kokuda1/.rbenv/shims:/Users/kokuda1/.rbenv/bin:/Users/kokuda1/.rvm/bin:/Users/kokuda1/.rvm/bin"
+
+# nodebrew
+export PATH=$HOME/.nodebrew/current/bin:$PATH
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
