@@ -10,7 +10,7 @@ sudo_path=({/usr/local,/usr,}/sbin(N-/))
 path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/kokuda1/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -61,6 +61,7 @@ plugins=(git rake ruby)
 # User configuration
 
 export PATH="/Users/kokuda1/.rbenv/shims:/Users/kokuda1/.rbenv/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/kokuda1/.rbenv/shims:/Users/kokuda1/.rbenv/bin:/Users/kokuda1/.rvm/bin:/Users/kokuda1/.rvm/bin"
+export PATH="/home/kazunari/.rvm/gems/ruby-1.9.2-p180@optimal_biz_web_admin/bin:/home/kazunari/.rvm/gems/ruby-1.9.2-p180@global/bin:/home/kazunari/.rvm/rubies/ruby-1.9.2-p180/bin:/home/kazunari/.rvm/bin:/usr/local/Trolltech/Qt-4.7.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/kazunari/.rvm/bin:/home/kazunari/.rvm/bin:/home/kazunari/.rvm/bin:/home/kazunari/.rvm/bin"
 
 # nodebrew
 export PATH=$HOME/.nodebrew/current/bin:$PATH
@@ -108,6 +109,8 @@ source $ZSH/oh-my-zsh.sh
 # alias
 alias ssh-peco="grep -w Host ~/.ssh/config | peco | awk '{print \$2}' | xargs -o -n 1 ssh"
 alias pco='git checkout `git branch | peco`'
+alias ticket_logs='git log --pretty=oneline | head -20 | tac | sed -e "s|\([a-z0-9]*\) \(.*\)|* [\1/${PWD##*/}]\n * \2\n|"'
+[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
 
 # tmux自動起動
 
@@ -134,3 +137,44 @@ export NVM_DIR="/Users/kokuda1/.nvm"
 
 # terminalのウインドウに現在のディレクトリを表示
 export PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
+
+
+# ----------------------
+# Git Aliases
+# ----------------------
+alias ga='git add'
+alias gaa='git add .'
+alias gaaa='git add -A'
+alias gb='git branch'
+alias gbd='git branch -d '
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcom='git checkout master'
+alias gd='git diff'
+alias gda='git diff HEAD'
+alias gi='git init'
+alias gl='git log'
+alias glg='git log --graph --oneline --decorate --all'
+alias gld='git log --pretty=format:"%h %ad %s" --date=short --all'
+alias gm='git merge --no-ff'
+alias gp='git pull'
+alias gss='git status -s'
+alias gst='git stash'
+alias gstl='git stash list'
+alias gstp='git stash pop'
+alias gstd='git stash drop'
+alias s='git status'
+
+# ----------------------
+# Git Function
+# ----------------------
+# Git log find by commit message
+function glf() { git log --all --grep="$1"; }
+
+alias be='bundle exec'
+alias bez='bundle exec zeus'
+alias bezs='bundle exec zeus s'
+alias bezc='bundle exec zeus c'
+alias bezst='bundle exec zeus start'
