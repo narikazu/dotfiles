@@ -22,6 +22,8 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'git://github.com/tpope/vim-rails.git'
+NeoBundle 'godlygeek/tabular'
+NeoBundle 'plasticboy/vim-markdown'
 
 " My Bundles
 NeoBundle 'altercation/vim-colors-solarized' 
