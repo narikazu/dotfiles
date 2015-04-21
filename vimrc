@@ -85,3 +85,6 @@ vnoremap ( "zdi^V(<C-R>z)<ESC>
 vnoremap " "zdi^V"<C-R>z^V"<ESC>
 vnoremap ' "zdi'<C-R>z'<ESC>
 inoremap <silent> jj <ESC>
+
+"vim-markdownの設定
+let g:vim_markdown_folding_disabled=1
