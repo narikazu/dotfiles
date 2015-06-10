@@ -107,6 +107,8 @@ source $ZSH/oh-my-zsh.sh
 #fi
 
 # alias
+alias tac='gtac'
+alias sed='gsed'
 alias ssh-peco="grep -w Host ~/.ssh/config | peco | awk '{print \$2}' | xargs -o -n 1 ssh"
 alias pco='git checkout `git branch | peco`'
 alias ticket_logs='git log --pretty=oneline | head -20 | tac | sed -e "s|\([a-z0-9]*\) \(.*\)|* [\1/${PWD##*/}]\n * \2\n|"'
