@@ -7,12 +7,13 @@ source ~/git-completion.bash
 source ~/.rails.bash
 
 
+alias g="git"
 alias gco="git checkout"
 alias s="git status"
-alias br="git branch"
-alias gci="git commit"
-alias d="git diff"
-alias dcach="git diff --cached"
+alias gb="git branch"
+alias gc="git commit"
+alias gd="git diff"
+alias gdc="git diff --cached"
 
 alias ls='ls -G'
 
