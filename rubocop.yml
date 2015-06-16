@@ -46,6 +46,9 @@ Style/BarePercentLiterals:
 Style/BlockComments:
   Enabled: false
 
+Style/BlockDelimiters:
+  Enabled: false
+
 Style/BlockEndNewline:
   Enabled: false
 
