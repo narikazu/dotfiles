@@ -59,6 +59,8 @@ HIST_STAMPS="mm/dd/yyyy"
 plugins=(git rake ruby)
 
 # User configuration
+export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/local/heroku/bin:/Users/narikazu/bin:/Users/narikazu/.rbenv/shims:/usr/local    /php5/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/narikazu/android-sdks/platform-tools:/Users/narikazu/android-sdks/tools"
+
 export PATH="/Users/kokuda1/.rbenv/shims:/Users/kokuda1/.rbenv/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/kokuda1/.rbenv/shims:/Users/kokuda1/.rbenv/bin:/Users/kokuda1/.rvm/bin:/Users/kokuda1/.rvm/bin"
 export PATH="/home/kazunari/.rvm/gems/ruby-1.9.2-p180@optimal_biz_web_admin/bin:/home/kazunari/.rvm/gems/ruby-1.9.2-p180@global/bin:/home/kazunari/.rvm/rubies/ruby-1.9.2-p180/bin:/home/kazunari/.rvm/bin:/usr/local/Trolltech/Qt-4.7.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/kazunari/.rvm/bin:/home/kazunari/.rvm/bin:/home/kazunari/.rvm/bin:/home/kazunari/.rvm/bin"
 eval "$(rbenv init - zsh)"
@@ -74,11 +76,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='mvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
