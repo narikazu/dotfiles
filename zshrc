@@ -62,7 +62,6 @@ plugins=(git rake ruby)
 export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/local/heroku/bin:/Users/narikazu/bin:/Users/narikazu/.rbenv/shims:/usr/local    /php5/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/narikazu/android-sdks/platform-tools:/Users/narikazu/android-sdks/tools"
 
 export PATH="/Users/kokuda1/.rbenv/shims:/Users/kokuda1/.rbenv/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/kokuda1/.rbenv/shims:/Users/kokuda1/.rbenv/bin:/Users/kokuda1/.rvm/bin:/Users/kokuda1/.rvm/bin"
-export PATH="/home/kazunari/.rvm/gems/ruby-1.9.2-p180@optimal_biz_web_admin/bin:/home/kazunari/.rvm/gems/ruby-1.9.2-p180@global/bin:/home/kazunari/.rvm/rubies/ruby-1.9.2-p180/bin:/home/kazunari/.rvm/bin:/usr/local/Trolltech/Qt-4.7.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/kazunari/.rvm/bin:/home/kazunari/.rvm/bin:/home/kazunari/.rvm/bin:/home/kazunari/.rvm/bin"
 eval "$(rbenv init - zsh)"
 
 # nodebrew
@@ -181,11 +180,4 @@ alias s='git status'
 function glf() { git log --all --grep="$1"; }
 
 alias be='bundle exec'
-alias bez='bundle exec zeus'
-alias bezs='bundle exec zeus s'
-alias bezc='bundle exec zeus c'
-alias bezr='bundle exec zeus rspec'
-alias bezst='bundle exec zeus start'
-alias opt_biz_admin_resetup='bundle exec rake db:drop db:create db:migrate db:migrate:plugins' 
-alias opt_biz_admin_schema_load='bundle exec rake db:schema:load RAILS_ENV=test'
-alias opt_biz_admin_data='bundle exec rails r script/development/create_dev_data.rb'
+

@@ -19,9 +19,7 @@ alias ls='ls -G'
 
 alias be="bundle exec"
 alias beg='bundle exec guard'
-alias rki='be rake db:import_dummy_data_all'
 alias rkm='bundle exec spring rake db:migrate'
-alias rkm_t='bundle exec spring rake db:migrate RAILS_ENV=test'
 alias r_s='bundle exec spring rails s'
 alias r_c='bundle exec spring rails c'
 alias r_db='bundle exec spring rails db'
