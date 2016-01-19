@@ -59,9 +59,9 @@ HIST_STAMPS="mm/dd/yyyy"
 plugins=(git rake ruby)
 
 # User configuration
-export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/local/heroku/bin:/Users/narikazu/bin:/Users/narikazu/.rbenv/shims:/usr/local    /php5/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/narikazu/android-sdks/platform-tools:/Users/narikazu/android-sdks/tools"
+export PATH=/usr/local/php5/bin:$PATH
+export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/local/heroku/bin:/Users/narikazu/bin:/Users/narikazu/.rbenv/shims:/usr/local/php5/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/narikazu/android-sdks/platform-tools:/Users/narikazu/android-sdks/tools"
 
-export PATH="/Users/kokuda1/.rbenv/shims:/Users/kokuda1/.rbenv/bin:/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/kokuda1/.rbenv/shims:/Users/kokuda1/.rbenv/bin:/Users/kokuda1/.rvm/bin:/Users/kokuda1/.rvm/bin"
 eval "$(rbenv init - zsh)"
 
 # nodebrew
