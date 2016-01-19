@@ -1,6 +1,7 @@
 AllCops:
   Exclude:
     - 'vendor/**/*'
+    - 'Gemfile.lock'
   RunRailsCops: true
   DisplayCopNames: true
 
