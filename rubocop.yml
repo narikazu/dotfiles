@@ -2,8 +2,10 @@ AllCops:
   Exclude:
     - 'vendor/**/*'
     - 'Gemfile.lock'
-  RunRailsCops: true
   DisplayCopNames: true
+
+Rails:
+  Enabled: true
 
 Style/AccessModifierIndentation:
   Enabled: false
@@ -401,7 +403,7 @@ Style/Tab:
 Style/TrailingBlankLines:
   Enabled: false
 
-Style/TrailingComma:
+Style/TrailingCommaInLiteral:
   Enabled: false
 
 Style/TrailingWhitespace:
