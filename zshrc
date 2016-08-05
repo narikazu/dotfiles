@@ -183,3 +183,5 @@ function glf() { git log --all --grep="$1"; }
 
 alias be='bundle exec'
 
+
+export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
