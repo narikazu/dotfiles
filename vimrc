@@ -19,6 +19,7 @@ set expandtab
 set tabstop=2
 set shiftwidth=2
 set noswapfile
+set showmatch
 set title
 highlight clear cursorline
 
