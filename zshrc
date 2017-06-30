@@ -179,6 +179,7 @@ alias s='git status'
 function glf() { git log --all --grep="$1"; }
 
 alias be='bundle exec'
+alias b='bundle'
 
 
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
