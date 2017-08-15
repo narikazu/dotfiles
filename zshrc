@@ -110,6 +110,7 @@ alias ssh-peco="grep -w Host ~/.ssh/config | peco | awk '{print \$2}' | xargs -o
 alias pco='git checkout `git branch | peco`'
 alias ticket_logs='git log --pretty=oneline | head -20 | tac | sed -e "s|\([a-z0-9]*\) \(.*\)|* [\1/${PWD##*/}]\n * \2\n|"'
 [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # tmux自動起動
 
