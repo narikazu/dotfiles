@@ -21,6 +21,7 @@ set shiftwidth=2
 set noswapfile
 set showmatch
 set title
+set nobackup
 highlight clear cursorline
 
 hi CursorLineNr cterm=bold
