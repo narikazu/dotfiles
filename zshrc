@@ -109,6 +109,7 @@ alias sed='gsed'
 alias ssh-peco="grep -w Host ~/.ssh/config | peco | awk '{print \$2}' | xargs -o -n 1 ssh"
 alias pco='git checkout `git branch | peco`'
 alias ticket_logs='git log --pretty=oneline | head -20 | tac | sed -e "s|\([a-z0-9]*\) \(.*\)|* [\1/${PWD##*/}]\n * \2\n|"'
+alias -g B='`git branch | peco | sed -e "s/^\*[ ]*//g"`'
 [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
@@ -184,3 +185,29 @@ alias b='bundle'
 
 
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
+
+# peco-select-history
+function peco-select-history() {
+    BUFFER=$(fc -l -r -n 1 | peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle redisplay
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
+
+# peco-find-file
+function peco-find-file() {
+    if git rev-parse 2> /dev/null; then
+        source_files=$(git ls-files)
+    else
+        source_files=$(find . -type f)
+    fi
+    selected_files=$(echo $source_files | peco --prompt "[find file]")
+
+    BUFFER="${BUFFER}${echo $selected_files | tr '\n' ' '}"
+    CURSOR=$#BUFFER
+    zle redisplay
+}
+zle -N peco-find-file
+bindkey '^q' peco-find-file
+
