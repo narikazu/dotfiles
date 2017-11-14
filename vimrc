@@ -22,6 +22,7 @@ set noswapfile
 set showmatch
 set title
 set nobackup
+autocmd FileType gitcommit setlocal spell spelllang=en_us
 highlight clear cursorline
 
 hi CursorLineNr cterm=bold
