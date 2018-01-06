@@ -27,12 +27,6 @@ highlight clear cursorline
 
 hi CursorLineNr cterm=bold
 
-" solarized
-"set background=light
-"colorscheme solarized
-"let g:solarized_termcolors=256
-"let g:solarized_termtrans=1
-
 inoremap { {}<LEFT>
 inoremap [ []<LEFT>
 inoremap ( ()<LEFT>
