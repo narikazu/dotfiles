@@ -59,6 +59,8 @@ HIST_STAMPS="mm/dd/yyyy"
 plugins=(git rake rails git-open)
 
 # User configuration
+export GOENV_ROOT="$HOME/.goenv"
+eval "$(goenv init -)"
 export PATH=/usr/local/php5/bin:$PATH
 export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/local/heroku/bin:/Users/narikazu/bin:/Users/narikazu/.rbenv/shims:/usr/local/php5/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/narikazu/android-sdks/platform-tools:/Users/narikazu/android-sdks/tools"
 
