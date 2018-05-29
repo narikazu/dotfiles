@@ -63,11 +63,10 @@ export GOENV_ROOT="$HOME/.goenv"
 eval "$(goenv init -)"
 export PATH=/usr/local/php5/bin:$PATH
 export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/local/heroku/bin:/Users/narikazu/bin:/Users/narikazu/.rbenv/shims:/usr/local/php5/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/narikazu/android-sdks/platform-tools:/Users/narikazu/android-sdks/tools"
+# nodebrew
+export PATH=/usr/local/var/nodebrew/current/bin:$PATH
 
 eval "$(rbenv init - zsh)"
-
-# nodebrew
-export PATH=$HOME/.nodebrew/current/bin:$PATH
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
