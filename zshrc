@@ -174,6 +174,7 @@ alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gstd='git stash drop'
 alias s='git status'
+alias gpsf='git push --force-with-lease'
 
 # ----------------------
 # Git Function
