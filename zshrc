@@ -134,7 +134,7 @@ export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 
 
-export NVM_DIR="/Users/kokuda1/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # terminalのウインドウに現在のディレクトリを表示
