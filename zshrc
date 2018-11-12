@@ -186,6 +186,7 @@ function glf() { git log --all --grep="$1"; }
 
 alias be='bundle exec'
 alias b='bundle'
+alias create_pwd='openssl rand -base64 32'
 
 
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
