@@ -216,3 +216,10 @@ function peco-find-file() {
 zle -N peco-find-file
 bindkey '^q' peco-find-file
 
+
+if [ $commands[kubectl] ]; then
+  source <(kubectl completion zsh)
+fi
+if [ $commands[stern] ]; then
+  source <(stern --completion=zsh)
+fi
