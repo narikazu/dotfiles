@@ -166,6 +166,7 @@ alias glg='git log --graph --oneline --decorate --all'
 alias gld='git log --pretty=format:"%h %ad %s" --date=short --all'
 alias gm='git merge --no-ff'
 alias gp='git pull'
+alias gpp='git pull -p'
 alias gpr='git pull --rebase'
 alias gps='git push'
 alias gss='git status -s'
@@ -175,6 +176,7 @@ alias gstp='git stash pop'
 alias gstd='git stash drop'
 alias s='git status'
 alias gpsf='git push --force-with-lease'
+eval "$(hub alias -s)"
 
 # ----------------------
 # Git Function
