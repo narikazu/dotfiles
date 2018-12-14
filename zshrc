@@ -151,7 +151,7 @@ alias gap='git add -p'
 alias gb='git branch'
 alias gbd='git branch -d '
 alias gc='git commit'
-alias gca='git commit --amend'
+alias gca='git commit --amend --no-edit'
 alias gcm='git commit -m'
 alias gco='git checkout'
 alias gcob='git checkout -b'
@@ -176,6 +176,7 @@ alias gstp='git stash pop'
 alias gstd='git stash drop'
 alias s='git status'
 alias gpsf='git push --force-with-lease'
+alias gtl='git describe --abbrev=0 --tags'
 eval "$(hub alias -s)"
 
 # ----------------------
