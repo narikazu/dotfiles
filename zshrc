@@ -56,16 +56,21 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rake rails git-open)
+plugins=(git rake rails)
 
 # User configuration
-export GOENV_ROOT="$HOME/.goenv"
-eval "$(goenv init -)"
 export PATH=/usr/local/php5/bin:$PATH
 export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/local/heroku/bin:/Users/narikazu/bin:/Users/narikazu/.rbenv/shims:/usr/local/php5/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/narikazu/android-sdks/platform-tools:/Users/narikazu/android-sdks/tools"
 # nodebrew
 export PATH=/usr/local/var/nodebrew/current/bin:$PATH
+# Go
+export GOENV_ROOT="$HOME/.goenv"
+export PATH=$GOENV_ROOT/bin:$PATH
+eval "$(goenv init -)"
+export GOPATH=$HOME/.go
+export PATH="$PATH:$GOPATH/bin"
 
+# Ruby
 eval "$(rbenv init - zsh)"
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -188,7 +193,8 @@ function glf() { git log --all --grep="$1"; }
 alias be='bundle exec'
 alias b='bundle'
 alias create_pwd='openssl rand -base64 32'
-
+alias kube_staging="kubectl get pods | grep expand-backend-staging | head -n 1 | awk '{ print \$1}'"
+alias kube_pro="kubectl get pods | grep expand-backend | awk '(NR == 1){ print \$1 }'"
 
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
@@ -217,10 +223,24 @@ function peco-find-file() {
 zle -N peco-find-file
 bindkey '^q' peco-find-file
 
-
 if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
 fi
 if [ $commands[stern] ]; then
   source <(stern --completion=zsh)
 fi
+
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+  eval "$(pyenv virtualenv-init -)"
+fi
+
+export GOENV_ROOT="$HOME/.goenv"
+eval "$(goenv init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/narikazu/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/narikazu/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/narikazu/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/narikazu/google-cloud-sdk/completion.zsh.inc'; fi
