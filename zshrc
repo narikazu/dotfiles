@@ -18,21 +18,6 @@ export ZSH=~/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="robbyrussell"
 
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
-
-# Uncomment the following line to change how often to auto-update (in days).
-# export UPDATE_ZSH_DAYS=13
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
 
@@ -48,9 +33,6 @@ ZSH_THEME="robbyrussell"
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -77,37 +59,8 @@ eval "$(rbenv init - zsh)"
 
 source $ZSH/oh-my-zsh.sh
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
 # Preferred editor for local and remote sessions
 export EDITOR='vim'
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# tmuxの起動
-# 既にtmuxを起動してないか
-#if [ "$TMUX" = "" ]; then
-#    tmux attach;
-
-#    # detachしてない場合
-#    if [ $? ]; then
-#        tmux;
-#    fi
-#fi
 
 # alias
 alias tac='gtac'
@@ -193,8 +146,6 @@ function glf() { git log --all --grep="$1"; }
 alias be='bundle exec'
 alias b='bundle'
 alias create_pwd='openssl rand -base64 32'
-alias kube_staging="kubectl get pods | grep expand-backend-staging | head -n 1 | awk '{ print \$1}'"
-alias kube_pro="kubectl get pods | grep expand-backend | awk '(NR == 1){ print \$1 }'"
 
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
@@ -223,13 +174,6 @@ function peco-find-file() {
 zle -N peco-find-file
 bindkey '^q' peco-find-file
 
-if [ $commands[kubectl] ]; then
-  source <(kubectl completion zsh)
-fi
-if [ $commands[stern] ]; then
-  source <(stern --completion=zsh)
-fi
-
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
@@ -239,8 +183,5 @@ fi
 export GOENV_ROOT="$HOME/.goenv"
 eval "$(goenv init -)"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/narikazu/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/narikazu/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/narikazu/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/narikazu/google-cloud-sdk/completion.zsh.inc'; fi
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
