@@ -56,7 +56,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rake rails git-open)
+plugins=(git rake rails)
 
 # User configuration
 export PATH=/usr/local/php5/bin:$PATH
@@ -223,13 +223,6 @@ function peco-find-file() {
 zle -N peco-find-file
 bindkey '^q' peco-find-file
 
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/kaz/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/kaz/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/kaz/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/kaz/google-cloud-sdk/completion.zsh.inc'; fi
-
 if [ $commands[kubectl] ]; then
   source <(kubectl completion zsh)
 fi
@@ -242,3 +235,12 @@ if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
+
+export GOENV_ROOT="$HOME/.goenv"
+eval "$(goenv init -)"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/narikazu/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/narikazu/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/narikazu/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/narikazu/google-cloud-sdk/completion.zsh.inc'; fi
