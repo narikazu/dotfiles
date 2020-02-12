@@ -99,6 +99,10 @@ export NVM_DIR="$HOME/.nvm"
 # terminalのウインドウに現在のディレクトリを表示
 export PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
 
+# alias
+alias vi="nvim"
+alias vim="nvim"
+
 
 # ----------------------
 # Git Aliases
