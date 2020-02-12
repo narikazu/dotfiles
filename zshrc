@@ -1,3 +1,4 @@
+export TERM=xterm-256color
 # 重複パスを登録しない
 typeset -U path cdpath fpath manpath
 
