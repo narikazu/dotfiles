@@ -1,15 +1,4 @@
 export TERM=xterm-256color
-# 重複パスを登録しない
-typeset -U path cdpath fpath manpath
-
-# sudo用のpathを設定
-typeset -xT SUDO_PATH sudo_path
-typeset -U sudo_path
-sudo_path=({/usr/local,/usr,}/sbin(N-/))
-
-# pathを設定
-path=(~/bin(N-/) /usr/local/bin(N-/) ${path})
-
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -95,9 +84,6 @@ export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-# terminalのウインドウに現在のディレクトリを表示
-export PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
 
 # alias
 alias vi="nvim"
