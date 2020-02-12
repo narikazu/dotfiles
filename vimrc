@@ -1,43 +1,32 @@
 syntax enable
-set helplang=en
+
+set langmenu=en_US
 set number
-set ruler
-set list
-set listchars=tab:>-,trail:-,nbsp:%,extends:↲,precedes:<,eol:↲
+
+" Enable true colors
+if (has("termguicolors"))
+  set termguicolors
+endif
+
+" Search
 set incsearch
 set hlsearch
-set nowrap
 set showmatch
-set whichwrap=h,l
-set nowrapscan
 set ignorecase
 set smartcase
-set hidden
-set history=2000
-set autoindent
+
+" Indentation
 set expandtab
 set tabstop=2
 set shiftwidth=2
+
 set noswapfile
-set showmatch
-set title
-set nobackup
+set whichwrap=h,l
 autocmd FileType gitcommit setlocal spell spelllang=en_us
 highlight clear cursorline
 
-hi CursorLineNr cterm=bold
+" Cursor
+set cursorline
 
-inoremap { {}<LEFT>
-inoremap [ []<LEFT>
-inoremap ( ()<LEFT>
-inoremap " ""<LEFT>
-inoremap ' ''<LEFT>
-vnoremap { "zdi^V{<C-R>z}<ESC>
-vnoremap [ "zdi^V[<C-R>z]<ESC>
-vnoremap ( "zdi^V(<C-R>z)<ESC>
-vnoremap " "zdi^V"<C-R>z^V"<ESC>
-vnoremap ' "zdi'<C-R>z'<ESC>
 inoremap <silent> jj <ESC>
 
-"vim-markdownの設定
-let g:vim_markdown_folding_disabled=1
