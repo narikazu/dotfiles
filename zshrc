@@ -38,7 +38,7 @@ HIST_STAMPS="mm/dd/yyyy"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rake rails)
+plugins=(git)
 
 # User configuration
 export PATH=/usr/local/php5/bin:$PATH
