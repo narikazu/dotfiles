@@ -1,7 +1,6 @@
 # Show the current directory
 export PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
 
-
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
@@ -10,10 +9,6 @@ export TERM=xterm-256color
 
 plugins=(git)
 
-# less
-export LESS='-R'
-export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
-
 ZSH_THEME="robbyrussell"
 
 # rbenv
@@ -21,13 +16,12 @@ export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
 source $ZSH/oh-my-zsh.sh
+
 # Load Git completion
 fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 
-
 # tmux自動起動
-
 if [ -z "$TMUX" -a -z "$STY" ]; then
     if type tmuxx >/dev/null 2>&1; then
         tmuxx
@@ -42,8 +36,7 @@ if [ -z "$TMUX" -a -z "$STY" ]; then
     fi
 fi
 
-export LESS='-R'
-
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
