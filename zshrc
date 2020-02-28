@@ -34,18 +34,6 @@ HIST_STAMPS="mm/dd/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-# User configuration
-export PATH=/usr/local/php5/bin:$PATH
-export PATH="/usr/local/heroku/bin:/usr/local/bin:/usr/local/heroku/bin:/Users/narikazu/bin:/Users/narikazu/.rbenv/shims:/usr/local/php5/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/narikazu/android-sdks/platform-tools:/Users/narikazu/android-sdks/tools"
-# nodebrew
-export PATH=/usr/local/var/nodebrew/current/bin:$PATH
-# Go
-export GOENV_ROOT="$HOME/.goenv"
-export PATH=$GOENV_ROOT/bin:$PATH
-eval "$(goenv init -)"
-export GOPATH=$HOME/.go
-export PATH="$PATH:$GOPATH/bin"
-
 # Ruby
 eval "$(rbenv init - zsh)"
 
