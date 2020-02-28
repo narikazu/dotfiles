@@ -1,6 +1,13 @@
+export EDITOR='vim'
 export TERM=xterm-256color
+
+# less
+export LESS='-R'
+export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
+
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
 
 # Load Git completion
 fpath=(~/.zsh/completions $fpath)
@@ -15,14 +22,6 @@ plugins=(git)
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-
-source $ZSH/oh-my-zsh.sh
-
-export EDITOR='vim'
-
-# alias
-alias tac='gtac'
-alias sed='gsed'
 
 # tmux自動起動
 
@@ -48,9 +47,15 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # alias
+alias be='bundle exec'
+alias b='bundle'
+alias create_pwd='openssl rand -base64 32'
+
 alias vi="nvim"
 alias vim="nvim"
 
+alias tac='gtac'
+alias sed='gsed'
 
 # ----------------------
 # Git Aliases
@@ -89,10 +94,6 @@ alias s='git status'
 alias gpsf='git push --force-with-lease'
 alias gtl='git describe --abbrev=0 --tags'
 eval "$(hub alias -s)"
-
-alias be='bundle exec'
-alias b='bundle'
-alias create_pwd='openssl rand -base64 32'
 
 export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
 
