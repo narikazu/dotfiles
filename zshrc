@@ -1,6 +1,9 @@
 export EDITOR='vim'
 export TERM=xterm-256color
 
+# Show the current directory
+export PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
+
 # less
 export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
