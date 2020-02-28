@@ -30,3 +30,7 @@ set cursorline
 
 inoremap <silent> jj <ESC>
 
+" Plugin
+call plug#begin('~/.vim/plugged')
+Plug 'preservim/nerdtree'
+call plug#end()
