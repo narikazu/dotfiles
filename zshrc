@@ -48,12 +48,6 @@ export EDITOR='vim'
 # alias
 alias tac='gtac'
 alias sed='gsed'
-alias ssh-peco="grep -w Host ~/.ssh/config | peco | awk '{print \$2}' | xargs -o -n 1 ssh"
-alias pco='git checkout `git branch | peco`'
-alias ticket_logs='git log --pretty=oneline | head -20 | tac | sed -e "s|\([a-z0-9]*\) \(.*\)|* [\1/${PWD##*/}]\n * \2\n|"'
-alias -g B='`git branch | peco | sed -e "s/^\*[ ]*//g"`'
-[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
-[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 
 # tmux自動起動
 
@@ -142,30 +136,10 @@ function peco-select-history() {
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 
-# peco-find-file
-function peco-find-file() {
-    if git rev-parse 2> /dev/null; then
-        source_files=$(git ls-files)
-    else
-        source_files=$(find . -type f)
-    fi
-    selected_files=$(echo $source_files | peco --prompt "[find file]")
-
-    BUFFER="${BUFFER}${echo $selected_files | tr '\n' ' '}"
-    CURSOR=$#BUFFER
-    zle redisplay
-}
-zle -N peco-find-file
-bindkey '^q' peco-find-file
-
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 if command -v pyenv 1>/dev/null 2>&1; then
   eval "$(pyenv init -)"
   eval "$(pyenv virtualenv-init -)"
 fi
-
-export GOENV_ROOT="$HOME/.goenv"
-eval "$(goenv init -)"
 
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
