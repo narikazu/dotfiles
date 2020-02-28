@@ -95,8 +95,6 @@ alias gpsf='git push --force-with-lease'
 alias gtl='git describe --abbrev=0 --tags'
 eval "$(hub alias -s)"
 
-export PATH=$PATH:/usr/local/share/git-core/contrib/diff-highlight
-
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 
