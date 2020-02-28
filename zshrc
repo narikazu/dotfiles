@@ -34,8 +34,9 @@ HIST_STAMPS="mm/dd/yyyy"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-# Ruby
-eval "$(rbenv init - zsh)"
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
