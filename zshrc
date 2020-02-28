@@ -1,30 +1,30 @@
+# Show the current directory
+export PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
+
+
+# Path to your oh-my-zsh installation.
+export ZSH=~/.oh-my-zsh
+
 export EDITOR='vim'
 export TERM=xterm-256color
 
-# Show the current directory
-export PROMPT_COMMAND='echo -ne "\033]0;${HOSTNAME%%.*}:${PWD/$HOME/~}\007"'
+plugins=(git)
 
 # less
 export LESS='-R'
 export LESSOPEN='| /usr/local/bin/src-hilite-lesspipe.sh %s'
 
-# Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-
-# Load Git completion
-fpath=(~/.zsh/completions $fpath)
-autoload -U compinit && compinit
-
 ZSH_THEME="robbyrussell"
-
-HIST_STAMPS="mm/dd/yyyy"
-
-plugins=(git)
 
 # rbenv
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+source $ZSH/oh-my-zsh.sh
+# Load Git completion
+fpath=(~/.zsh/completions $fpath)
+autoload -U compinit && compinit
+
 
 # tmux自動起動
 
