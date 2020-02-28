@@ -2,6 +2,10 @@ export TERM=xterm-256color
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
 
+# Load Git completion
+fpath=(~/.zsh/completions $fpath)
+autoload -U compinit && compinit
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
