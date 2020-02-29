@@ -7,8 +7,6 @@ export ZSH=~/.oh-my-zsh
 export EDITOR='vim'
 export TERM=xterm-256color
 
-plugins=(git)
-
 ZSH_THEME="robbyrussell"
 
 # rbenv
