@@ -33,4 +33,10 @@ inoremap <silent> jj <ESC>
 " Plugin
 call plug#begin('~/.vim/plugged')
 Plug 'preservim/nerdtree'
+Plug 'lifepillar/vim-solarized8'
 call plug#end()
+
+" Colorscheme
+set background=dark
+colorscheme solarized8
+
