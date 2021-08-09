@@ -21,7 +21,10 @@ set tabstop=2
 set shiftwidth=2
 
 set noswapfile
+set wrap
 set whichwrap=h,l
+set tw=0
+set formatoptions=q
 autocmd FileType gitcommit setlocal spell spelllang=en_us
 highlight clear cursorline
 
