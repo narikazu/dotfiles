@@ -33,15 +33,19 @@ alias vim="nvim"
 
 alias tac='gtac'
 alias sed='gsed'
+alias gsed='sed'
 
 # ----------------------
 # Git Aliases
 # ----------------------
+alias g='git'
 alias ga='git add'
 alias gaa='git add .'
 alias gap='git add -p'
 alias gb='git branch'
 alias gbd='git branch -d '
+alias gbD='git branch -D'
+alias gbr='git branch -r'
 alias gc='git commit'
 alias gca='git commit --amend --no-edit'
 alias gco='git checkout'
@@ -50,18 +54,19 @@ alias gcom='git checkout master'
 alias gd='git diff'
 alias gda='git diff HEAD'
 alias gdc='git diff --cached'
+alias gf='git fetch'
 alias gl='git log'
 alias glp='git log -p'
 alias gp='git pull'
 alias gpp='git pull -p'
 alias gpr='git pull --rebase'
 alias gps='git push'
+alias gpsf='git push --force-with-lease'
 alias gst='git stash'
 alias gstl='git stash list'
 alias gstp='git stash pop'
 alias gstd='git stash drop'
 alias s='git status'
-alias gpsf='git push --force-with-lease'
 eval "$(hub alias -s)"
 
 export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
@@ -75,5 +80,8 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # pyenv
 export PATH="/home/kaz/.pyenv/bin:$PATH"
+export PATH=$PATH:~/.local/bin
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+[[ -s "/home/kaz/.gvm/scripts/gvm" ]] && source "/home/kaz/.gvm/scripts/gvm"
